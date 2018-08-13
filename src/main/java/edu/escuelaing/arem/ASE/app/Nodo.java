@@ -7,9 +7,9 @@ package edu.escuelaing.arem.ASE.app;
  */
 public class Nodo {
     private Nodo next;
-    private Object dato;
+    private double dato;
     
-    public Nodo(Object dato){
+    public Nodo(double dato){
         this.dato = dato;
         this.next = null;
     }
@@ -22,7 +22,7 @@ public class Nodo {
         this.next = n;
     }
     
-    public Object getDato(){
+    public double getDato(){
         return this.dato;
     }
     

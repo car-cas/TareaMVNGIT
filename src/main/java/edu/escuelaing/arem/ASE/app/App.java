@@ -8,11 +8,11 @@ package edu.escuelaing.arem.ASE.app;
 
 public class App{
     
-    private Linked lista;
     private Linked listaDos;
     
     private double pro;
     private double deri;
+    private Linked lista = new Linked();
     
     public App(){
         this.lista=lista;
@@ -21,19 +21,30 @@ public class App{
     }
     
     public double media(){
-    
-        return pro;
+        for (int i =0;i<lista.getTamanio();i++){
+           pro+=lista.ver(i);
+           
+       }
+        return pro/lista.getTamanio();
     }
     
     public double derivadaParcial(){
+        for (int i =0;i<lista.getTamanio();i++){
+           deri+=lista.ver(i); 
+        }
         
-        return deri;
+        double c = 0;
+        for (int i =0;i<lista.getTamanio();i++){
+           c+=Math.pow(lista.ver(i)-deri,2);
+        }
+        
+        double total = Math.sqrt(c/lista.getTamanio());
+        return total;
     }
     
    
     public static void main( String[] args ){
-        App app = new App();
-        System.out.println("Media: "+app.media());
-        System.out.println("DerivadaParcial: "+app.derivadaParcial());
+        
+    
     }
 }

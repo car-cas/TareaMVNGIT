@@ -19,7 +19,7 @@ public class Linked {
         tamanio = 0;
     }
     
-    public void agregar(Object n){
+    public void agregar(double n){
         if(cabeza==null){
             cabeza = new Nodo(n);
         }else{
@@ -31,7 +31,7 @@ public class Linked {
         tamanio++;
     }
     
-    public Object ver(int indice){
+    public double ver(int indice){
         Nodo temp = cabeza;
         for(int i=0;i<indice;i++){
             temp = temp.getNext();
@@ -42,5 +42,9 @@ public class Linked {
     public int getTamanio(){
         return tamanio;
     }  
+    
+    public boolean estaVacia(){
+        return (cabeza == null)?true:false;
+    }
     
 }
