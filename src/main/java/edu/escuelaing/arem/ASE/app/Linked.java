@@ -12,11 +12,11 @@ package edu.escuelaing.arem.ASE.app;
 public class Linked {
     
     private Nodo cabeza;
-    private int tamano; 
+    private int tamanio; 
     
     public Linked(){
         cabeza = null;
-        tamano = 0;
+        tamanio = 0;
     }
     
     public void agregar(Object n){
@@ -28,7 +28,7 @@ public class Linked {
             nuevo.agregar(temp);
             cabeza = nuevo;
         }
-        tamano++;
+        tamanio++;
     }
     
     public Object ver(int indice){
@@ -38,5 +38,9 @@ public class Linked {
         }
         return temp.getDato();
     }
+    
+    public int getTamanio(){
+        return tamanio;
+    }  
     
 }
