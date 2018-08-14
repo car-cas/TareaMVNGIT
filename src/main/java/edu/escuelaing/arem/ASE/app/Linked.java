@@ -6,7 +6,8 @@
 package edu.escuelaing.arem.ASE.app;
 
 /**
- *
+ *Tarea MVNGIT
+ * 
  * @author Carlos Andres Castaneda Lozano
  */
 public class Linked {
@@ -14,10 +15,19 @@ public class Linked {
     private Nodo cabeza;
     private int tamanio; 
     
+    /**
+     * Constructor Linked
+     */
+    
     public Linked(){
         cabeza = null;
         tamanio = 0;
     }
+    
+    /**
+     *
+     * @param n 
+     */
     
     public void agregar(double n){
         if(cabeza==null){
@@ -31,6 +41,10 @@ public class Linked {
         tamanio++;
     }
     
+    /**
+     * 
+     */
+    
     public double ver(int indice){
         Nodo temp = cabeza;
         for(int i=0;i<indice;i++){
@@ -39,9 +53,17 @@ public class Linked {
         return temp.getDato();
     }
     
+    /**
+     * 
+     */
+    
     public int getTamanio(){
         return tamanio;
-    }  
+    }
+    
+    /**
+     * 
+     */
     
     public boolean estaVacia(){
         return (cabeza == null)?true:false;
