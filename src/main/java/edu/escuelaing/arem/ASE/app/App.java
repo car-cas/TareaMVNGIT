@@ -92,7 +92,7 @@ public class App{
     public static void main( String[] args ) throws IOException{
         
         String c;
-        c = "/Users/CARLOS/Desktop/prueba.txt";
+        c = "archivo.txt";
         leerArchivo(c);
         System.out.println("Media : "+ media());
         System.out.println("Derivada Parcial : "+ derivadaParcial());
