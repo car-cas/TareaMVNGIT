@@ -31,7 +31,7 @@ public class App{
     }
     
     /**
-     * Calcula la media de una lista encadenada
+     * Metodo media, calcula la media de una lista encadenada
      * @return res media de la lista
      */
     
@@ -39,14 +39,13 @@ public class App{
         double res;
         for (int i =0;i<lista.getTamanio();i++){
            pro+=lista.ver(i);
-           
        }
         res =  pro/lista.getTamanio();
         return res;
     }
     
      /**
-     * Calcula la derivada parcial de una lista encadenada
+     * Metodo derivadaParcial, calcula la derivada parcial de una lista encadenada
      * @return total derivada parcial de la lista
      */
     
@@ -55,18 +54,20 @@ public class App{
         for (int i =0;i<lista.getTamanio();i++){
            deri+=lista.ver(i); 
         }
-        
+        double p = deri/lista.getTamanio();
         double c = 0;
+        
         for (int i =0;i<lista.getTamanio();i++){
-           c+=Math.pow(lista.ver(i)-deri,2);
+           c+=Math.pow(lista.ver(i)-p,2);
         }
         
-        double total = Math.sqrt(c/lista.getTamanio());
+        double total = Math.sqrt(c/(lista.getTamanio()-1));
+
         return total;
     }
     
     /**
-     * Lee los números de un archivo .txt y los almacena en una lista enlazada
+     * Metodo leerArchivo, lee los números de un archivo .txt y los almacena en una lista enlazada
      * @throws java.io.IOException IoException
      * @param archivo archivo
      */
@@ -83,7 +84,7 @@ public class App{
     }
     
     /**
-     * Método Principal del program
+     * Metodo main
      * @param args args
      * @throws java.io.IOException exception
      */
@@ -91,7 +92,7 @@ public class App{
     public static void main( String[] args ) throws IOException{
         
         String c;
-        c = "C:\\Users\\2110540\\Desktop\\archivo.txt";
+        c = "/Users/CARLOS/Desktop/prueba.txt";
         leerArchivo(c);
         System.out.println("Media : "+ media());
         System.out.println("Derivada Parcial : "+ derivadaParcial());

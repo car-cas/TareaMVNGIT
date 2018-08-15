@@ -25,8 +25,9 @@ public class Linked {
     }
     
     /**
-     *
-     * @param n 
+     * Metodo agregar, agrega nuevos elementos a la lista encadenada
+     * e incremennta el tamaño de la lista 
+     * @param n double 
      */
     
     public void agregar(double n){
@@ -42,7 +43,8 @@ public class Linked {
     }
     
     /**
-     * 
+     * Metodo ver, muestra los elementos de la lista
+     * @para indice int
      */
     
     public double ver(int indice){
@@ -54,19 +56,12 @@ public class Linked {
     }
     
     /**
-     * 
+     * Metodo getTamanio, retorna el tamanio de la lista
+     * @return tamanio int 
      */
     
     public int getTamanio(){
         return tamanio;
-    }
-    
-    /**
-     * 
-     */
-    
-    public boolean estaVacia(){
-        return (cabeza == null)?true:false;
     }
     
 }
