@@ -54,6 +54,7 @@ public class App{
         for (int i =0;i<lista.getTamanio();i++){
            deri+=lista.ver(i); 
         }
+   
         double p = deri/lista.getTamanio();
         double c = 0;
         
