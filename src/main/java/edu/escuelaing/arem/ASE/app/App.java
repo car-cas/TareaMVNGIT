@@ -50,7 +50,7 @@ public class App{
      */
     
     
-    public static double derivadaParcial(){
+    public static double desviacionEstandar(){
         for (int i =0;i<lista.getTamanio();i++){
            deri+=lista.ver(i); 
         }
@@ -96,7 +96,7 @@ public class App{
         c = "archivo.txt";
         leerArchivo(c);
         System.out.println("Media : "+ media());
-        System.out.println("Derivada Parcial : "+ derivadaParcial());
+        System.out.println("Desviacion Estandar : "+ desviacionEstandar());
         
     }
     
