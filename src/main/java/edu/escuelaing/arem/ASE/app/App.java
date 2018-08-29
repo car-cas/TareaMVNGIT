@@ -45,8 +45,8 @@ public class App{
     }
     
      /**
-     * Metodo derivadaParcial, calcula la derivada parcial de una lista encadenada
-     * @return total derivada parcial de la lista
+     * Metodo desviacionEstandar, calcula la desviacion estandar de una lista encadenada
+     * @return total desviacion estandar de la lista
      */
     
     
